@@ -53,12 +53,12 @@ const Button = styled.button`
   background-color: var(--color-brand-600);
   box-shadow: var(--shadow-sm);
 
-  ${(props) => sizes[props.size]}
   ${(props) => variations[props.variation]}
+  ${(props) => sizes[props.size]}
 `;
 
 Button.defaultProps = {
-  size: "meduim",
-  variations: "primary",
+  variation: "primary",
+  size: "medium",
 };
 export default Button;
