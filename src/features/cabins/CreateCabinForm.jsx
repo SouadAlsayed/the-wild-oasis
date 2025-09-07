@@ -9,8 +9,9 @@ import { useForm } from "react-hook-form";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createCabin } from "../../services/apiCabins";
 import toast from "react-hot-toast";
+import FormRow from "../../ui/FormRow";
 
-const FormRow = styled.div`
+const FormRow2 = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 24rem 1fr 1.2fr;
@@ -70,24 +71,36 @@ function CreateCabinForm() {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
-      <FormRow>
-        <Label htmlFor="name">Cabin name</Label>
-        <Input type="text" id="name" {...register("name")} />
-      </FormRow>
-
-      <FormRow>
-        <Label htmlFor="maxCapacity">Maximum capacity</Label>
-        <Input type="number" id="maxCapacity" {...register("maxCapacity")} />
-      </FormRow>
-
-      <FormRow>
-        <Label htmlFor="regularPrice">Regular price</Label>
-        <Input type="number" id="regularPrice" {...register("regularPrice")} />
-      </FormRow>
-
-      <FormRow>
-        <Label htmlFor="discount">Discount</Label>
+      <FormRow label="Cabin name">
         <Input
+          disabled={isCreating}
+          type="text"
+          id="name"
+          {...register("name")}
+        />
+      </FormRow>
+
+      <FormRow label="Maximum capacity">
+        <Input
+          disabled={isCreating}
+          type="number"
+          id="maxCapacity"
+          {...register("maxCapacity")}
+        />
+      </FormRow>
+
+      <FormRow label="Regular price">
+        <Input
+          disabled={isCreating}
+          type="number"
+          id="regularPrice"
+          {...register("regularPrice")}
+        />
+      </FormRow>
+
+      <FormRow label="Discount">
+        <Input
+          disabled={isCreating}
           type="number"
           id="discount"
           defaultValue={0}
@@ -95,8 +108,7 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
-        <Label htmlFor="description">Description for website</Label>
+      <FormRow label="Description for website">
         <Textarea
           type="number"
           id="description"
@@ -105,10 +117,10 @@ function CreateCabinForm() {
         />
       </FormRow>
 
-      <FormRow>
+      <FormRow2>
         <Label htmlFor="image">Cabin photo</Label>
         <FileInput id="image" accept="image/*" />
-      </FormRow>
+      </FormRow2>
 
       <FormRow>
         {/* type is an HTML attribute! */}
