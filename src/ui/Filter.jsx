@@ -1,5 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import styled, { css } from "styled-components";
+import { PAGE_SIZE } from "../utils/constants";
+import { useBookings } from "../features/bookings/useBookings";
 
 const StyledFilter = styled.div`
   border: 1px solid var(--color-grey-100);
@@ -40,6 +42,7 @@ function Filter({ filterField, options }) {
   const currentFilter = searchParams.get(filterField) || options.at(0).value;
 
   function handleClick(value) {
+    searchParams.set("page", 1);
     searchParams.set(filterField, value);
     setSearchParams(searchParams);
   }
