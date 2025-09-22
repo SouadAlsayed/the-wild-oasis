@@ -59,7 +59,7 @@ function CabinRow({ cabin }) {
     image,
   } = cabin;
 
-  const { isCreating, createCabin } = useCreateCabin();
+  const { createCabin } = useCreateCabin();
   function handleDuplicate() {
     createCabin({
       name: `copy of ${name}`,
