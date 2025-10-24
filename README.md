@@ -1,8 +1,22 @@
-# React + Vite
+# 🏨 The Wild Oasis - Hotel Management System 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive hotel management dashboard built with React and Supabase.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dashboard** - Real-time statistics, sales charts, and occupancy tracking
+- **Cabin Management** - Add, edit, delete cabins with image uploads
+- **Booking System** - Manage reservations with filtering and sorting
+- **Check-in/Check-out** - Streamlined guest processing
+- **User Authentication** - Secure login and profile management
+- **Dark Mode** - Toggle between light and dark themes
+- **Settings** - Configure booking rules and pricing
+  
+## 🚀 Getting Started
+bash
+- `git clone https://github.com/SouadAlsayed/the-wild-oasis.git`
+- `npm install`
+- `npm run dev`
+
+## 🛠️ Tech Stack
+• React + Vite • React Query • Supabase • Styled Components • Recharts
